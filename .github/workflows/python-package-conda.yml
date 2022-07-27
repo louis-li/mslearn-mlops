@@ -1,9 +1,9 @@
 name: Create training job
 
 on:
-  pull_request:
-    types:
-      - closed
+  push:
+    branches:
+      - main
   workflow_dispatch:
     inputs:
       resource_group:
