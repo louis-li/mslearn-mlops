@@ -1,6 +1,9 @@
 name: Create training job
 
 on:
+  push:
+    branches:    
+      - main
   workflow_dispatch:
     inputs:
       resource_group:
@@ -33,4 +36,4 @@ jobs:
     - name: Create dataset in Azure ML workspace
       run: |
         cd src
-        az ml job create --file job.yml --resource-group ${{ github.event.inputs.resource_group }} --workspace-name ${{ github.event.inputs.aml_workspace }}
+        az ml job create --file job.yml
