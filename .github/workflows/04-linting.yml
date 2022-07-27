@@ -43,4 +43,4 @@ jobs:
         python-version: '3.8'
     - name: Test 
       run: | 
-        python tests/test_train.py
+        pytest tests/
