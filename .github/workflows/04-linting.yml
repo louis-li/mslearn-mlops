@@ -1,6 +1,8 @@
 name: Linting
 
 on:
+  pull_request: 
+    types: [opened]
   workflow_dispatch:
     inputs:
       resource_group:
