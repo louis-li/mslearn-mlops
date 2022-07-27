@@ -35,5 +35,4 @@ jobs:
         az configure --defaults workspace="${{ github.event.inputs.aml_workspace }}"
     - name: Create dataset in Azure ML workspace
       run: |
-        cd src
-        az ml job create --file job.yml
+        az ml job create --file src/job.yml
