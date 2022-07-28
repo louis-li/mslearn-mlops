@@ -12,6 +12,8 @@ from sklearn.linear_model import LogisticRegression
 # define functions
 def main(args):
     # enable auto logging
+    mlflow.set_tracking_uri("azureml://eastus.api.azureml.ms/mlflow/v1.0/subscriptions/f3f672c1-6cfc-4f72-92ae-2b1ab1c0cf69/resourceGroups/rg-dev-mlops/providers/Microsoft.MachineLearningServices/workspaces/mlw-dev-mlops")
+    
     mlflow.autolog()
 
     # read data
