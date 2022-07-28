@@ -56,4 +56,4 @@ jobs:
         az configure --defaults workspace="${{ github.event.inputs.aml_workspace }}"
     - name: Create dataset in Azure ML workspace
       run: |
-        az ml model list
+        az ml model list -w mlw-dev-mlops --resource-group  rg-dev-mlops
